@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --main-bg-color: brown;
+}
+
+#main-navbar {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  padding: 0 8rem;
+  font-size: 2.5rem;
+}
+
+#main-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-navbar a:link,
+#main-navbar a:visited,
+#main-navbar a:active {
+  text-decoration: none;
+  transition: border-bottom 0.5s;
+  margin-left: 3rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+#main-navbar a:hover {
+  border-bottom: solid 0.3rem #fff;
+}
+
+#presentation {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../css/img/mainbg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#presentation h1 {
+  font-size: 10rem;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+#presentation h1:hover {
+  cursor: none;
+  opacity: 0.1;
+}
