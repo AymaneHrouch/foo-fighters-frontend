@@ -50,9 +50,11 @@ html {
   color: #000;
 }
 
+/* index.html */
+
 #presentation {
   height: 90vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,6 +76,47 @@ html {
   opacity: 0.1;
 }
 
+#members div {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#members h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem 0;  
+}
+
+.member {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.member img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+  opacity: 0.6;
+}
+
+.member img:hover {
+  cursor: pointer;
+  transform: scale(1.1,1.1);
+  opacity: 1;
+}
+
+.member h3 {
+  color: #f00;
+}
+
+.member h4 {
+  color: rgb(145, 10, 0);
+}
 /* albums.html */
 
 .scroll {
@@ -114,6 +157,11 @@ html {
   height: auto;
 }
 
+.album:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgb(211, 67, 67);
+}
+
 .album img:hover {
   transform: scale(1.2, 1.2);
 }
@@ -123,10 +171,6 @@ html {
   width: 100%;
   font-size: 1.7rem;
   margin-bottom: 1rem;
-}
-
-.album h3:hover {
-  color: rgb(211, 67, 67);
 }
 
 .album h4 {
