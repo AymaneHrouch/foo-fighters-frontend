@@ -36,7 +36,7 @@ html {
   margin-left: 3rem;
   color: #fff;
   font-size: 2rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 3px;
 }
 
@@ -51,7 +51,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../css/img/mainbg.jpg") no-repeat;
+  background: url("img/mainbg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -67,4 +67,47 @@ html {
 #presentation h1:hover {
   cursor: none;
   opacity: 0.1;
+}
+
+/* albums.html */
+
+.scroll {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://media.pitchfork.com/photos/5fa30d5af6b189eaea25b20c/2:1/w_3000,h_1500,c_limit/Foo-Fighters.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  bottom: 0;
+  width: 300rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 5rem;
+  height: 100%;
+  border-radius: 4px;
+  position: relative;
+}
+
+.album img {
+  transition: transform 0.4s;
+  margin-bottom: 2rem;
+}
+
+.album img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.album a {
+  text-decoration: none;
+  position: absolute;
+  bottom: 2rem;
 }
