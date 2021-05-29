@@ -77,7 +77,7 @@ html {
 
 .scroll {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://media.pitchfork.com/photos/5fa30d5af6b189eaea25b20c/2:1/w_3000,h_1500,c_limit/Foo-Fighters.jpg")
+    url("img/albumsbg.jpg")
       no-repeat fixed;
   background-size: cover;
   background-position: center;
