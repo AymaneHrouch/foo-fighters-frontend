@@ -15,6 +15,7 @@ xhr.onreadystatechange = function () {
     });
 
     Array.from(document.getElementById("songs"))[0].checked = true; // Check the first option
+    document.getElementsByTagName("label")[0].classList.add("selected");
     document.getElementById("song-title").innerHTML =
       doc.children[0].querySelector("song title").textContent;
     document.getElementById("lyrics").innerHTML +=
@@ -28,8 +29,18 @@ xhr.onreadystatechange = function () {
         e => e.querySelector("title").textContent === checkedSong
       )[0];
       let lyrics = song.querySelector("lyrics").textContent;
+      console.log(checkedSong);
+      document.querySelector;
+      Array.from(document.querySelectorAll("label")).forEach(e =>
+        e.classList.remove("selected")
+      );
+      document
+        .querySelector(`[for=\"${checkedSong.toLocaleLowerCase()}\"]`)
+        .classList.add("selected");
       let title = song.querySelector("title").textContent;
-      document.getElementById("lyrics").innerHTML = `<h1 id="song-title">${title}</h1>\n${lyrics}`
+      document.getElementById(
+        "lyrics"
+      ).innerHTML = `<h1 id="song-title">${title}</h1>\n${lyrics}`;
     };
   }
 };

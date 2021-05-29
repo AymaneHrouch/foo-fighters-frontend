@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -78,8 +78,7 @@ html {
 
 .scroll {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("img/albumsbg.jpg")
-      no-repeat fixed;
+    url("img/albumsbg.jpg") no-repeat fixed;
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -151,6 +150,20 @@ html {
   color: #bbb;
 }
 
+.album a.read-lyrics {
+  padding: 0;
+  bottom: 10rem;
+  color: #f00;
+  font-size: 2rem;
+  background-color: #000;
+  margin-top: 1rem;
+}
+
+.album a.read-lyrics:hover {
+  background-color: #555
+}
+
+
 #back-btn {
   position: fixed;
   top: 0;
@@ -192,11 +205,14 @@ html {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   text-align: center;
+  transition: transform 0.2s;
 }
 
-#songs label:hover {
+#songs label:hover,
+#songs label.selected {
   cursor: pointer;
   background-color: #fff;
+  transform: scale(1.2,1.2);
 }
 
 #songs label,
