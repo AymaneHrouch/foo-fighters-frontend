@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -73,7 +75,8 @@ html {
 
 .scroll {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://media.pitchfork.com/photos/5fa30d5af6b189eaea25b20c/2:1/w_3000,h_1500,c_limit/Foo-Fighters.jpg") no-repeat fixed;
+    url("https://media.pitchfork.com/photos/5fa30d5af6b189eaea25b20c/2:1/w_3000,h_1500,c_limit/Foo-Fighters.jpg")
+      no-repeat fixed;
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -85,6 +88,8 @@ html {
 }
 
 .album {
+  word-wrap: break-word;
+  font-family: "Odibee Sans", cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,6 +98,8 @@ html {
   background-color: rgba(255, 255, 255, 0.6);
   margin: 0 5rem;
   height: 100%;
+  width: 250px;
+  text-align: center;
   border-radius: 4px;
   position: relative;
 }
@@ -100,14 +107,59 @@ html {
 .album img {
   transition: transform 0.4s;
   margin-bottom: 2rem;
+  width: 8rem;
+  height: auto;
 }
 
 .album img:hover {
   transform: scale(1.2, 1.2);
 }
 
+.album h3 {
+  letter-spacing: 1.5px;
+  width: 100%;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.album h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
 .album a {
   text-decoration: none;
   position: absolute;
   bottom: 2rem;
+  font-size: 3rem;
+  background-color: rgb(211, 67, 67);
+  padding: 0.5rem 1rem;
+  color: #333;
+  width: 100%;
+}
+
+.album a:hover {
+  background-color: #000;
+  color: #bbb;
+}
+
+#back-btn {
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+}
+
+#back-btn a:link,
+#back-btn a:visited,
+#back-btn a:active {
+  color: #f00;
+  font-size: 3rem;
+  border-radius: 0 0 15px 0;
+  padding: 0 1rem 0.2rem 1rem;
+}
+
+#back-btn a:hover {
+  color: #00f;
+  border: 3px red solid;
+  border-left: none;
 }
