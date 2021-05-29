@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
 
 * {
   padding: 0;
@@ -165,9 +166,54 @@ html {
   padding: 0 1rem 0.2rem 1rem;
 }
 
-
-
 #back-btn a:hover {
   border-bottom: 1px rgb(211, 67, 67) solid;
   border-left: none;
+}
+
+/* lyrics.html */
+
+#lyrics-section {
+  background: url("img/lyricsbg.jpg") no-repeat fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#songs {
+  position: fixed;
+  left: 4rem;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#songs label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#songs label:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+#songs label,
+#lyrics {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#lyrics {
+  height: 100%;
+  width: 40rem;
+  margin-left: 50%;
+  margin-right: auto;
+  font-family: "Pattaya", sans-serif;
+  font-size: 1.8rem;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+#song-title {
+  text-decoration: underline;
 }
