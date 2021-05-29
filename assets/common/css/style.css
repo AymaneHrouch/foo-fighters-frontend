@@ -7,6 +7,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: "Lato", sans-serif;
 }
 
@@ -81,7 +82,7 @@ html {
   background-position: center;
   position: fixed;
   bottom: 0;
-  width: 300rem;
+  width: 280rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -152,14 +153,15 @@ html {
 #back-btn a:link,
 #back-btn a:visited,
 #back-btn a:active {
-  color: #f00;
+  color: rgb(211, 67, 67);
   font-size: 3rem;
   border-radius: 0 0 15px 0;
   padding: 0 1rem 0.2rem 1rem;
 }
 
+
+
 #back-btn a:hover {
-  color: #00f;
-  border: 3px red solid;
+  border: 1px rgb(211, 67, 67) solid;
   border-left: none;
 }
