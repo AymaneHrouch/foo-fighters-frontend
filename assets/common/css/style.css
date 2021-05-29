@@ -124,6 +124,10 @@ html {
   margin-bottom: 1rem;
 }
 
+.album h3:hover {
+  color: rgb(211, 67, 67);
+}
+
 .album h4 {
   font-size: 1.2rem;
   color: #333;
@@ -148,6 +152,7 @@ html {
 #back-btn {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 99999;
 }
 
@@ -163,6 +168,6 @@ html {
 
 
 #back-btn a:hover {
-  border: 1px rgb(211, 67, 67) solid;
+  border-bottom: 1px rgb(211, 67, 67) solid;
   border-left: none;
 }
