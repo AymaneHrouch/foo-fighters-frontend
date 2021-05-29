@@ -200,11 +200,13 @@ html {
   color: #f00;
   font-size: 2rem;
   background-color: #000;
+  height: 2.5rem;
   margin-top: 1rem;
+  transition: font-size 0.2s;
 }
 
 .album a.read-lyrics:hover {
-  background-color: #555
+  font-size: 2.5rem;
 }
 
 
