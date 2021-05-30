@@ -21,39 +21,38 @@
       <a href="#tour-dates">Tour Dates</a>
       <a href="gallery.html">Gallery</a>
       <a href="albums.html">Albums</a>
-      <a href="fans.html">Fans Zone</a>
+      <a href="fans.php">Fans Zone</a>
     </nav>
     <header id="fz-presentation" class="presentation">
       <h1>Fans Zone</h1>
     </header>
     <section id="messages">
+        <?php 
+        try { 
+            $db = new PDO('mysql:host=localhost;dbname=foofighters;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        } 
+        catch (Exeption $e){ 
+            die('Erreur : ' .$e->getMessage()); 
+        }
+
+        $answer = $db->query('SELECT id, user, msg, date_format(date,\'[%d/%m/%Y/%H:%i:%s]\') AS date FROM comments ORDER BY id DESC LIMIT 0, 10');
+        while ($infos = $answer->fetch()) {
+        ?>
       <div class="message">
-        <span class="user">Aymane Hrouch</span>
+        <span class="user"><?php echo htmlspecialchars($infos['user']) ?></span>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ad
-          accusamus voluptatem architecto sunt! Porro nesciunt maiores
-          inventore, omnis aut aspernatur tempore qui neque quaerat vel modi
-          aliquam labore
-          delenidddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddti?
+            <?php echo $infos['msg'] ?>
         </p>
-        <span class="date">2021/05/30</span>
+        <span class="date"><?php echo $infos['date'] ?></span>
       </div>
-      <div class="message">
-        <span class="user">Aymane Hrouch</span>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ad
-          accusamus voluptatem architecto sunt! Porro nesciunt maiores
-          inventore, omnis aut aspernatur tempore qui neque quaerat vel modi
-          aliquam labore
-          delenidddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddti?
-        </p>
-        <span class="date">2021/05/30</span>
-      </div>
+        <?php
+        } 
+        ?>
     </section>
     <section id="comment">
       <h1>Send Your Comment!</h1>
       <h3>You too can send a comment that will be displayed in this page.</h3>
-      <form action="">
+      <form action="post.php" method="post">
         <label for="user">Username:</label>
         <input type="text" name="user" id="user" />
         <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
