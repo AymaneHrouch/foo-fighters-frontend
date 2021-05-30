@@ -40,7 +40,8 @@ xhr.onreadystatechange = function () {
       let title = song.querySelector("title").textContent;
       document.getElementById(
         "lyrics"
-      ).innerHTML = `<h1 id="song-title">${title}</h1>\n${lyrics}`;
+      ).innerHTML = `<h1 id="song-title">${title}</h1>\n${lyrics}`
+      window.scrollBy(0, -document.body.scrollHeight);
     };
   }
 };
