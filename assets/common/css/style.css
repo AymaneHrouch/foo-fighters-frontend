@@ -42,7 +42,7 @@ html {
   border-radius: 3px;
 }
 
-#main-navbar a:hover{
+#main-navbar a:hover {
   color: #fff;
   border-bottom: #fff solid 2px;
 }
@@ -53,18 +53,28 @@ html {
 
 /* index.html */
 
-#presentation {
-  height: 90vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#main-presentation {
   background: url("img/mainbg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-#presentation h1 {
+#fz-presentation {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("img/fzbg.jpg") no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.presentation {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation h1 {
   font-size: 10rem;
   color: red;
   background-color: rgba(0, 0, 0, 0.1);
@@ -72,7 +82,7 @@ html {
   text-align: center;
 }
 
-#presentation h1:hover {
+.presentation h1:hover {
   cursor: none;
   opacity: 0.1;
 }
@@ -82,7 +92,7 @@ html {
 #members {
   background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.445)),
     url("img/membersbg.jpg");
-    padding: 2.6rem 0;
+  padding: 2.6rem 0;
 }
 
 #members div {
@@ -138,14 +148,17 @@ html {
 }
 
 #infos .text {
-  background-color: #000;
-  color: #fff;
+  background-color: #333;
+  color: #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   line-height: 2rem;
   font-size: 1.2rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  padding: 0 2rem;
 }
 
 /* Tour Dates */
@@ -223,10 +236,9 @@ footer p {
   color: #666;
   position: absolute;
   bottom: 2px;
-  width:100%;
+  width: 100%;
   text-align: center;
 }
-
 
 /* albums.html */
 
@@ -389,4 +401,96 @@ footer p {
 
 #song-title {
   text-decoration: underline;
+}
+
+/* fans.html */
+
+#messages,
+#comment {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwyNQcgn-55P4wNBOBaeGUuToDe2uxKXHsqyOLDS4-c8-PFVo4KVGP-Xnaks-QBLqmukk&usqp=CAU");
+  background-size: 4rem;
+  padding: 2.6rem 0;
+}
+
+#messages .message {
+  background-color: rgb(255, 255, 255, 0.8);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 2rem;
+  position: relative;
+  border-bottom: 2px solid #000;
+}
+
+#messages .message .user {
+  font-weight: bold;
+  color: rgb(0, 0, 172);
+  font-size: 1.5rem;
+}
+
+#messages .message .user::after {
+  content: ":";
+}
+
+#messages .message p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#messages .message .date {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  color: #555;
+}
+
+/* comment form */
+#comment h1,
+#comment h3 {
+  text-align: center;
+  color: #ddd;
+  margin-bottom: 3rem;
+}
+
+#comment form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ddd;
+}
+
+#comment form input,
+#comment form textarea {
+  margin-bottom: 1.2rem;
+}
+
+#comment #user,
+#comment label {
+  height: 2rem;
+  font-size: 1.3rem;
+}
+
+#comment textarea {
+  font-size: 1.3rem;
+  width: 70%;
+  height: 20rem;
+}
+
+#comment [type="submit"] {
+  width: 8rem;
+  height: 3rem;
+  text-decoration: none;
+  border: none;
+  background-color: rgb(0, 134, 0);
+  font-size: 1rem;
+}
+
+#comment [type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgb(0, 204, 0);
 }
