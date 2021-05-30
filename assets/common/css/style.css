@@ -78,6 +78,7 @@ html {
 #members {
   background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.445)),
     url("https://www.morrisonhotelgallery.com/images/big/05-dave-grohl-foo-fighters-2008-by-dustin-rabin-067b-2409530.jpg");
+    padding: 2.6rem 0;
 }
 
 #members div {
@@ -186,6 +187,43 @@ html {
   background-color: #ddd;
   color: #000;
 }
+
+/* Footer */
+
+footer {
+  position: relative;
+}
+
+footer div {
+  height: 5rem;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+footer div a:link,
+footer div a:active,
+footer div a:visited {
+  text-decoration: none;
+  color: #bbb;
+  margin-right: 1rem;
+}
+
+footer div a:hover {
+  color: #fff;
+}
+
+footer p {
+  color: #666;
+  position: absolute;
+  bottom: 2px;
+  width:100%;
+  text-align: center;
+}
+
+
 /* albums.html */
 
 .scroll {
