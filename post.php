@@ -2,9 +2,9 @@
 
 // Connect to DB
 try { 
-    $db = new PDO('mysql:host=localhost;dbname=id16585148_foofighters;charset=utf8', 'aymane', '%wMlI*}40jC]v]ud', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $db = new PDO('mysql:host=localhost;dbname=foofighters;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 } 
-catch (Exeption $e){ 
+catch (Exception $e){ 
     die('Erreur : ' .$e->getMessage()); 
 } 
 
