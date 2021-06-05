@@ -5,6 +5,7 @@ xhr.onreadystatechange = function () {
     let parser = new DOMParser();
     doc = parser.parseFromString(this.responseText, "text/xml");
 
+    // Afficher la liste des chansons.
     Array.from(doc.querySelectorAll("song")).forEach(e => {
       let songsArr = Array.from(document.getElementById("songs"));
       let title = e.querySelector("title").textContent;
@@ -14,36 +15,52 @@ xhr.onreadystatechange = function () {
             <label for="${title.toLocaleLowerCase()}">${title}</label><br>`;
     });
 
-    Array.from(document.getElementById("songs"))[0].checked = true; // Check the first option
+    // Choisir la premiére option
+    Array.from(document.getElementById("songs"))[0].checked = true;
     document.getElementsByTagName("label")[0].classList.add("selected");
+
+    // Afficher les paroles de la premiére chanson
     document.getElementById("song-title").innerHTML =
       doc.children[0].querySelector("song title").textContent;
     document.getElementById("lyrics").innerHTML +=
-      doc.children[0].querySelector("song lyrics").textContent; // Fill the lyrics of the first song
+      doc.children[0].querySelector("song lyrics").textContent;
 
+    // Manipuler le changement de chanson
     document.getElementById("songs").onchange = () => {
       let songsOptions = Array.from(document.getElementById("songs"));
       let songsXML = Array.from(doc.children[0].querySelectorAll("song"));
-      checkedSong = songsOptions.filter(e => e.checked)[0].value;
+
+      checkedSong = songsOptions.filter(e => e.checked)[0].value; // La nouvelle chanson
+
+      // Obtenir la chansons depuit le fichier XML
       let song = songsXML.filter(
         e => e.querySelector("title").textContent === checkedSong
       )[0];
+
+      // Les paroles
       let lyrics = song.querySelector("lyrics").textContent;
-      console.log(checkedSong);
-      document.querySelector;
+
+      // Supprimer la class selected de toutes les chansons (donc de la chanson précédente)
       Array.from(document.querySelectorAll("label")).forEach(e =>
         e.classList.remove("selected")
       );
+
+      // Ajouter la class selected à la nouvelle chanson
       document
         .querySelector(`[for=\"${checkedSong.toLocaleLowerCase()}\"]`)
         .classList.add("selected");
+
+      // Mise à jour des paroles
       let title = song.querySelector("title").textContent;
+
       document.getElementById(
         "lyrics"
-      ).innerHTML = `<h1 id="song-title">${title}</h1>\n${lyrics}`
+      ).innerHTML = `<h1 id="song-title">${title}</h1>\n${lyrics}`;
+
+      // Faire défiler au haut de la page.
       window.scrollBy(0, -document.body.scrollHeight);
     };
   }
 };
-xhr.open("GET", "data.xml", true);
+xhr.open("GET", "assets/common/xml/lyrics.xml", true);
 xhr.send();
