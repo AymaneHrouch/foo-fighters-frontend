@@ -32,8 +32,9 @@
 
     <script>
       let xhr = new XMLHttpRequest();
-      xhr.open("GET", "assets/common/xml/gallery.xml");
+      xhr.open("GET", "./assets/common/xml/gallery.xml");
       xhr.onreadystatechange = function () {
+        // On obtient depuis le fichier XML src et caption
         let parser = new DOMParser();
         let doc = parser.parseFromString(this.responseText, "text/xml");
         let slideshowContainer = document.querySelector("#gallery div.slideshow-container");

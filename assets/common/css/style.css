@@ -17,6 +17,10 @@ html {
   --main-bg-color: brown;
 }
 
+main {
+  padding-top: 4rem;
+}
+
 #main-navbar {
   height: 4rem;
   width: 100%;
@@ -61,8 +65,7 @@ html {
 }
 
 #fz-presentation {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("img/fzbg.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/fzbg.jpg") no-repeat;
   background-size: cover;
   background-position: left;
 }
@@ -91,8 +94,7 @@ html {
 /* Section: Members */
 
 #members {
-  background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.445)),
-    url("img/membersbg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.445)), url("img/membersbg.jpg");
   padding: 2.6rem 0;
 }
 
@@ -506,7 +508,6 @@ footer p {
   overflow: hidden;
 }
 
-
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -530,7 +531,8 @@ footer p {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -552,8 +554,9 @@ footer p {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -586,11 +589,19 @@ footer p {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
