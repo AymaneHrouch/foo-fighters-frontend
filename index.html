@@ -92,7 +92,7 @@
                 LOLLAPALOOZA<br />
                 CHICAGO, US
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>09/03/21</td>
@@ -100,7 +100,7 @@
                 BONNAROO MUSIC + ARTS FESTIVAL<br />
                 MANCHESTER, TN
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>09/05/21</td>
@@ -108,7 +108,7 @@
                 BOTTLEROCK NAPA VALLEY<br />
                 NAPA, US
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>05/27/22</td>
@@ -116,7 +116,7 @@
                 BOSTON CALLING MUSIC FESTIVAL<br />
                 BOSTON, US
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>06/08/22</td>
@@ -124,7 +124,7 @@
                 FLUGHAFEN TEMPELHOF<br />
                 BERLIN, DE
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>06/10/22</td>
@@ -132,7 +132,7 @@
                 NOVA ROCK FESTIVAL<br />
                 NICKELSDORF, AT
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>06/12/22</td>
@@ -140,7 +140,7 @@
                 I-DAYS<br />
                 MILAN, IT
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>06/16/22</td>
@@ -148,7 +148,7 @@
                 CIUDAD DE LAS ARTES Y<br />
                 LAS CIENCIAS VALENCIA, ES
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>06/18/22</td>
@@ -156,7 +156,7 @@
                 ROCK IN RIO LISBON<br />
                 LISBON, PT
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>06/23/22</td>
@@ -164,7 +164,7 @@
                 FESTIVAL DE NIMES<br />
                 NIMES, FR
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
             <tr>
               <td>06/23/22</td>
@@ -172,7 +172,7 @@
                 FESTIVAL DE NIMES<br />
                 NIMES, FR
               </td>
-              <td><a href="#">Tickets</a></td>
+              <td><a href="#modal" rel="modal:open">Tickets</a></td>
             </tr>
           </table>
         </div>
@@ -188,11 +188,20 @@
       </div>
       <p>Copyright Reserved - Foo Fighters 2021</p>
     </footer>
+    <div id="modal" class="modal">
+      <p>Not Available at the moment.</p>
+      <!-- <a href="#" rel="modal:close">Close</a> -->
+    </div>
     <script>
       setTimeout(() => {
         if (location.href === `http://${location.host}/foofighters/index.html`)
-          document.location.replace("#members");
+          document.querySelector("#members").scrollIntoView();
       }, 3500);
     </script>
   </body>
+  <!-- JQuery -->
+  <script type="text/javascript" src="./assets/libs/jquery/jquery.min.js"></script>
+  <!-- jQuery Modal -->
+  <script src="./assets/libs/jquery/plugins/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="./assets/libs/jquery/plugins/jquery.modal.min.css" />
 </html>
