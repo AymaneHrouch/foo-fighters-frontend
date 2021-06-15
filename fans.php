@@ -20,14 +20,8 @@
     </header>
     <section id="messages">
         <?php 
-        try { 
-            $db = new PDO('mysql:host=localhost;dbname=foofighters;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        } 
-        catch (Exception $e){ 
-            die('Erreur : ' .$e->getMessage()); 
-        }
-
-        $answer = $db->query('SELECT id, user, msg, date_format(date,\'[%d/%m/%Y/%H:%i:%s]\') AS date FROM comments ORDER BY id DESC LIMIT 0, 10');
+        require_once("mod/config.php");
+        $answer = $pdo->query('SELECT id, user, msg, date_format(date,\'[%d/%m/%Y/%H:%i:%s]\') AS date FROM comments ORDER BY id DESC LIMIT 0, 10');
         while ($infos = $answer->fetch()) {
         ?>
       <div class="message">
