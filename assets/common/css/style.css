@@ -261,7 +261,7 @@ footer p {
 
 .album {
   word-wrap: break-word;
-  font-family: "Odibee Sans", cursive;
+  font-family: "Odibee Sans", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;

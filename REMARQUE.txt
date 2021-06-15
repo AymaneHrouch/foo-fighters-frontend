@@ -1,0 +1,1 @@
+Pour les pages lyrics.html et gallery.html on a utilisé javascript pour amener des données depuis des fichiers XML, mais ça ne fonctionne pas avec le protocole file:, ça necessite un protocole http: pour ça il faut lancer le site en utilisant un server comme wampserver.
