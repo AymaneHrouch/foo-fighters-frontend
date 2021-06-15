@@ -7,4 +7,5 @@
       <a href="gallery.php">Gallery</a>
       <a href="albums.php">Albums</a>
       <a href="fans.php">Fans Zone</a>
+      <a href="news.php">News</a>
 </nav>
