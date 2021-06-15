@@ -15,32 +15,48 @@
       <h1>Foo Fighters</h1>
     </header>
     <section id="members">
-      <h1>Members</h1>
-      <div>
-        <div class="member">
-          <img src="assets/common/img/members/1-min.jpg" alt="" />
-          <h3>Dave Grohi</h3>
-          <h4>Guitar</h4>
-        </div>
-        <div class="member">
-          <img src="assets/common/img/members/2-min.jpg" alt="" />
-          <h3>Rami Jaffee</h3>
-          <h4>Organ</h4>
-        </div>
-        <div class="member">
-          <img src="assets/common/img/members/3-min.jpg" alt="" />
-          <h3>Taylor Hawkins</h3>
-          <h4>Accoustic Drum Kit</h4>
-        </div>
-        <div class="member">
-          <img src="assets/common/img/members/4-min.jpg" alt="" />
-          <h3>Nate Mendel</h3>
-          <h4>Bass Guitar</h4>
-        </div>
-        <div class="member">
-          <img src="assets/common/img/members/5-min.jpg" alt="" />
-          <h3>Pat Smear</h3>
-          <h4>Rhythm Guitar</h4>
+        <h1>Members</h1>
+        <div>
+          <div class="member">
+            <img src="assets/common/img/members/1-min.jpg" alt="" />
+            <h3>Dave Grohi</h3>
+            <h4>Guitar</h4>
+          </div>
+          <div class="member">
+            <img src="assets/common/img/members/2-min.jpg" alt="" />
+            <h3>Rami Jaffee</h3>
+            <h4>Organ</h4>
+          </div>
+          <div class="member">
+            <img src="assets/common/img/members/3-min.jpg" alt="" />
+            <h3>Taylor Hawkins</h3>
+            <h4>Accoustic Drum Kit</h4>
+          </div>
+          <div class="member">
+            <img src="assets/common/img/members/4-min.jpg" alt="" />
+            <h3>Nate Mendel</h3>
+            <h4>Bass Guitar</h4>
+          </div>
+          <div class="member">
+            <img src="assets/common/img/members/5-min.jpg" alt="" />
+            <h3>Pat Smear</h3>
+            <h4>Rhythm Guitar</h4>
+          </div>
+          <div class="member">
+            <img src="assets/common/img/members/6-min.jpg" alt="" />
+            <h3>William Goldsmith</h3>
+            <h4>Acoustic Drum Kit</h4>
+          </div>
+          <div class="member">
+            <img src="assets/common/img/members/7-min.jpg" alt="" />
+            <h3>Christ Shiflett</h3>
+            <h4>Lead Guitar</h4>
+          </div>
+          <div class="member">
+            <img src="assets/common/img/members/8-min.jpg" alt="" />
+            <h3>Franz Stahl</h3>
+            <h4>Lead Guitar</h4>
+          </div>
         </div>
       </section>
       <section id="infos">
@@ -154,17 +170,7 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div>
-        <a href="#">
-          <i class="fa fa-facebook-official" aria-hidden="true"></i>
-        </a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </div>
-      <p>Copyright Reserved - Foo Fighters 2021</p>
-    </footer>
-    <?php include("footer") ?>
+    <?php include("footer.php") ?>
   </body>
   <!-- JQuery -->
   <script type="text/javascript" src="./assets/libs/jquery/jquery.min.js"></script>
