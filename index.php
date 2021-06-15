@@ -170,6 +170,9 @@
         </div>
       </section>
     </main>
+    <div id="modal" class="modal">
+      <p>Not Available at the moment.</p>
+    </div>
     <?php include("footer.php") ?>
   </body>
   <!-- JQuery -->
