@@ -5,18 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/common/css/style.css" />
-    <link rel="stylesheet" href="./assets/libs/css/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="shortcut icon" type="image/jpg" href="./assets/common/img/logo.svg" />
     <title>Foo Fighters - Albums</title>
   </head>
-
+  <?php include("navbar.php"); ?>
   <body>
     <div class="scroll">
-      <h1 id="back-btn">
-        <a href="index.php">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </a>
-      </h1>
       <div class="album">
         <img src="./assets/common/img/albums/album1.jpg" alt="" />
         <h3>Foo Fighters</h3>

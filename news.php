@@ -10,7 +10,7 @@
       type="image/jpg"
       href="assets/common/img/logo.svg"
     />
-    <title>Fans Zone</title>
+    <title>FooFighters - News</title>
   </head>
   <body>
     <?php include("navbar.php") ?>
@@ -21,15 +21,15 @@
         <?php 
         include_once 'mod/config.php';
 
-        $answer = $pdo->query('SELECT id, author, title, article, date_format(created_at,\'[%d/%m/%Y/%H:%i:%s]\') AS date FROM news ORDER BY created_at DESC LIMIT 0, 10');
-        while ($data = $answer->fetch()) {
+        $result = $pdo->query('SELECT n.id, u.name as author, n.title, n.article, date_format(n.created_at,\'%d/%m/%Y %H:%i\') AS date FROM news n, users u WHERE n.author = u.id ORDER BY n.created_at DESC LIMIT 0, 10');
+        while ($data = $result->fetch()) {
         ?>
       <div class="message">
-        <span class="article-title"><?php echo htmlspecialchars($data['title']) ?></span>
+        <a href="<?php echo "article.php?id=". $data["id"] ?>" class="article-title"><?php echo htmlspecialchars($data['title']) ?></a>
         <p>
-            <?php echo substr($data['article'], 0, 250) . "<a class='read-more' href=\"article.php?id=" . $data["id"] . "\">...Read More</a>" ?>
+            <?php echo substr(htmlspecialchars($data['article']), 0, 250) . "<a class='read-more' href=\"article.php?id=" . $data["id"] . "\">...Read More</a>" ?>
         </p>
-        <span class="date"><?php echo $data['date'] ?></span>
+        <span class="date"><?php echo $data["author"] . " - " . $data['date'] ?></span>
       </div>
         <?php
         } 

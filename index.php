@@ -19,7 +19,7 @@
         <div>
           <div class="member">
             <img src="assets/common/img/members/1-min.jpg" alt="" />
-            <h3>Dave Grohi</h3>
+            <h3>Dave Grohl</h3>
             <h4>Guitar</h4>
           </div>
           <div class="member">

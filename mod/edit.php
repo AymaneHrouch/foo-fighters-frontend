@@ -9,7 +9,7 @@
 
     $document_title = "";
     $success = "";
-    if(!isset($_GET["id"])) {
+    if(!isset($_GET["id"]) || $_GET["id"] == "" || !is_numeric($_GET["id"])) {
         echo "ERROR 400 - Bad Request<br/>ID not provided.";
         $document_title = "Edit - ERROR 400";
         exit;
