@@ -13,7 +13,7 @@
   <body>
     <div class="scroll">
       <h1 id="back-btn">
-        <a href="index.html">
+        <a href="index.php">
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </a>
       </h1>
@@ -91,7 +91,7 @@
         <img src="./assets/common/img/albums/album11.jpg" alt="" />
         <h3>Medicine at Midnight</h3>
         <h4>(2021)</h4>
-        <a class="read-lyrics" href="./lyrics.html">New!! Read Lyrics!</a>
+        <a class="read-lyrics" href="./lyrics.php">New!! Read Lyrics!</a>
         <a href="#modal" rel="modal:open">Buy</a>
       </div>
     </div>

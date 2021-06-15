@@ -13,16 +13,7 @@
     <title>Fans Zone</title>
   </head>
   <body>
-    <nav id="main-navbar">
-      <a class="logo" href="index.html">
-        <img src="assets/common/img/logo.svg" alt="" />
-      </a>
-      <a href="#members">Members</a>
-      <a href="#tour-dates">Tour Dates</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="albums.html">Albums</a>
-      <a href="fans.php">Fans Zone</a>
-    </nav>
+    <?php include("navbar.php") ?>
     <header id="fz-presentation" class="presentation">
       <h1>News</h1>
     </header>

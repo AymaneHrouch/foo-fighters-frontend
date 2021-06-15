@@ -63,7 +63,7 @@ if (location.protocol.startsWith("http")) {
   $("#modal")[0].innerHTML = `<h3>ERREUR!</h3>
   <p>Vous utiliser un mauvais protocole: <b>(<i>${location.protocol}</i>)</b></p>
   <p>Veuillez utiliser un serveur comme wampserver pour lancer le site web.</p> <br />
-  <a href="index.html">Acceuil</a>`;
+  <a href="index.php">Acceuil</a>`;
 
   $("#modal").modal({
     escapeClose: false,

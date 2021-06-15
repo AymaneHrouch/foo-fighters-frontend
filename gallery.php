@@ -14,15 +14,7 @@
     <title>Foo Fighters - Gallery</title>
   </head>
   <body>
-    <nav id="main-navbar">
-      <a class="logo" href="index.html">
-        <img src="assets/common/img/logo.svg" alt="" />
-      </a>
-      <a href="index.html#members">Members</a>
-      <a href="index.html#tour-dates">Tour Dates</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="albums.html">Albums</a>
-    </nav>
+    <?php include("navbar.php"); ?>
     <div id="modal" class="modal">
     </div>
     <main id="gallery">
