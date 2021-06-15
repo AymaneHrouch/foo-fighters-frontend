@@ -495,3 +495,22 @@ footer p {
   cursor: pointer;
   background-color: rgb(0, 204, 0);
 }
+
+/* news.php */
+
+.read-more {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.article-title {
+  font-family: "Pattaya", sans-serif;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 5rem;
+}

@@ -5,28 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/common/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="assets/libs/css/font-awesome-4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/jpg"
-      href="assets/common/img/logo.svg"
-    />
+    <link rel="stylesheet" href="assets/libs/css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" type="image/jpg" href="assets/common/img/logo.svg" />
     <title>Foo Fighters - Home</title>
   </head>
   <body>
-    <nav id="main-navbar">
-      <a class="logo" href="index.html"
-        ><img src="assets/common/img/logo.svg" alt=""
-      /></a>
-      <a href="index.html#members">Members</a>
-      <a href="index.html#tour-dates">Tour Dates</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="albums.html">Albums</a>
-      <a href="fans.php">Fans Zone</a>
-    </nav>
+    <?php include("navbar.php"); ?>
     <header id="main-presentation" class="presentation">
       <h1>Foo Fighters</h1>
     </header>
@@ -78,16 +62,14 @@
     <section id="infos">
       <div class="text">
         <p>
-          Foo Fighters is an American rock band formed in Seattle, Washington,
-          in 1994. It was founded by former Nirvana drummer Dave Grohl as a
-          one-man project following the dissolution of Nirvana after the suicide
-          of Kurt Cobain. The group took its name from "Foo fighter", a nickname
-          coined by Allied aircraft pilots for UFOs and other aerial phenomena.
-          Over the course of their career, Foo Fighters have won 12 Grammy
-          Awards, including Best Rock Album four times.[3] The band has also won
-          an American Music Award, four Brit Awards, and two MTV Video Music
-          Awards. As of 2015, Foo Fighters have sold over 12 million albums in
-          the U.S.
+          Foo Fighters is an American rock band formed in Seattle, Washington, in 1994. It was
+          founded by former Nirvana drummer Dave Grohl as a one-man project following the
+          dissolution of Nirvana after the suicide of Kurt Cobain. The group took its name from "Foo
+          fighter", a nickname coined by Allied aircraft pilots for UFOs and other aerial phenomena.
+          Over the course of their career, Foo Fighters have won 12 Grammy Awards, including Best
+          Rock Album four times.[3] The band has also won an American Music Award, four Brit Awards,
+          and two MTV Video Music Awards. As of 2015, Foo Fighters have sold over 12 million albums
+          in the U.S.
         </p>
       </div>
       <img src="assets/common/img/dave.jpg" alt="" />
@@ -187,18 +169,6 @@
         </table>
       </div>
     </section>
-    <footer>
-      <div>
-        <a href="#">
-          <i class="fa fa-facebook-official" aria-hidden="true"></i>
-        </a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </div>
-      <p>Copyright Reserved - Foo Fighters 2021</p>
-    </footer>
-    <script>
-      setTimeout(() => document.location.replace("#members"), 3500);
-    </script>
+    <?php include("footer") ?>
   </body>
 </html>

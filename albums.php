@@ -5,15 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/common/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="assets/libs/css/font-awesome-4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/jpg"
-      href="assets/common/img/logo.svg"
-    />
+    <link rel="stylesheet" href="assets/libs/css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" type="image/jpg" href="assets/common/img/logo.svg" />
     <title>Foo Fighters - Albums</title>
   </head>
 
@@ -98,19 +91,13 @@
         <img src="assets/common/img/albums/album11.jpg" alt="" />
         <h3>Medicine at Midnight</h3>
         <h4>(2021)</h4>
-        <a class="read-lyrics" href="/lyrics.html">New!! Read Lyrics!</a>
+        <a class="read-lyrics" href="lyrics.php">New!! Read Lyrics!</a>
         <a href="#">Buy</a>
       </div>
     </div>
   </body>
 
-  <script
-    type="text/javascript"
-    src="assets/libs/jquery/jquery.min.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="assets/libs/jquery/plugins/jquery.jInvertScroll.js"
-  ></script>
+  <script type="text/javascript" src="assets/libs/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/libs/jquery/plugins/jquery.jInvertScroll.js"></script>
   <script src="assets/common/js/albums.js"></script>
 </html>
