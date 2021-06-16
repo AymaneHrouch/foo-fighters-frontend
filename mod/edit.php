@@ -10,8 +10,10 @@
     $document_title = "";
     $success = "";
     if(!isset($_GET["id"]) || $_GET["id"] == "" || !is_numeric($_GET["id"])) {
-        echo "ERROR 400 - Bad Request<br/>ID not provided.";
         $document_title = "Edit - ERROR 400";
+        echo "<title>". $document_title ."</title>
+        <link rel=\"shortcut icon\" type=\"image/jpg\" href=\"../assets/common/img/logo.svg\" />
+        <body>ERROR 400 - Bad Request<br/>ID not provided.</body>";
         exit;
     }
     else {
@@ -23,14 +25,14 @@
 
             // Check if title is long enough
             if(strlen(trim($_POST["title"])) <= 5){
-                $title_err = "Title must be at least 5 characters long. it's now: " .  strlen(trim($_POST["title"]));
+                $title_err = "Title must be at least 5 characters long.";
             } else {
                 $username = trim($_POST["title"]);
             }
             
             // Check if article is long enough
-            if(strlen(trim($_POST["article"])) <= 5){
-                $article_err = "Article must be at least 5 characters long.";
+            if(strlen(trim($_POST["article"])) <= 120){
+                $article_err = "Article must be at least 120 characters long.";
             } else{
                 $username = trim($_POST["article"]);
             }
@@ -48,8 +50,10 @@
         $result = $pdo->query('SELECT n.title, n.article FROM news n, users u WHERE n.author = u.id AND n.id = ' . $_GET["id"]);
         $data = $result->fetch();
         if(!$data) {
-            echo "ERROR 400 - Bad Request<br/>Invalide ID.";
             $document_title = "Edit - ERROR 400";
+            echo "<title>". $document_title ."</title>
+            <link rel=\"shortcut icon\" type=\"image/jpg\" href=\"../assets/common/img/logo.svg\" />
+            <body>ERROR 400 - Bad Request<br/>Invalide ID.</body>";
             exit;
         }
         else {
@@ -66,7 +70,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="../assets/common/img/logo.svg" />
     <link rel="stylesheet" href="../assets/libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <title>FooFighters - New Article</title>
+    <title><?php echo $document_title ?></title>
 </head>
 <body>
     <?php include("header.php"); ?>

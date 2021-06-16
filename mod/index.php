@@ -23,7 +23,7 @@
             left: 30px;
         }
     </style>
-    <title>Articles</title>
+    <title>FooFighters - MOD Interface</title>
 </head>
 <body>
     <a href="logout.php" class="link-secondary px-3">Logout</a>
@@ -38,7 +38,7 @@
             ?>
             <div class="card mb-2">
                 <div class="card-body">
-                    <a href="<?php echo "edit?id=" . $data["id"]?>"><?php echo htmlspecialchars($data["title"]); ?></a>
+                    <a href="<?php echo "edit.php?id=" . $data["id"]?>"><?php echo htmlspecialchars($data["title"]); ?></a>
                     <small><?php echo "Author: " . $data["name"]?></small>
                     <a onclick="return confirm(`Are you sure? this can NOT be undone.`)" class="btn btn-danger float-right" href="delete.php?id=<?php echo $data["id"] ?>">Delete</a>
                 </div>

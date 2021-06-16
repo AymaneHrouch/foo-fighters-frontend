@@ -128,6 +128,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="shortcut icon" type="image/jpg" href="../assets/common/img/logo.svg" />
     <style>
         body{ font: 14px sans-serif; }
