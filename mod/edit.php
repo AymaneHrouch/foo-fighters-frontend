@@ -43,7 +43,7 @@
                     'title' => $_POST["title"],
                     'article' => $_POST["article"]
                 ));
-                $success = "edited!";
+                $success = "Edited!";
             }
         }
 
@@ -70,6 +70,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="../assets/common/img/logo.svg" />
     <link rel="stylesheet" href="../assets/libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <style>
+        .alert {
+            width: 30%;
+        }
+    </style>
     <title><?php echo $document_title ?></title>
 </head>
 <body>
@@ -79,12 +84,30 @@
         <form class="form-group" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]). "?id=" . $_GET["id"]?>" method="POST">
             <label for="title">Title</label>
             <input class="form-control" id="title" type="text" name="title" value="<?php echo $data["title"]?>">
-            <span style="color:red"><?php if(isset($title_err)) echo htmlspecialchars($title_err); ?></span>
+
+            <div class="alert alert-danger" 
+            <?php if(!isset($title_err) || ( isset($title_err) && empty($title_err) )) echo "hidden"; ?>
+            style="color:red;">
+            <?php if(isset($title_err)) echo $title_err; ?>
+            </div>
+
             <label for="article"></label>
             <textarea class="form-control" name="article" id="articel" cols="30" rows="10"><?php echo htmlspecialchars($data["article"])?></textarea>
-            <span style="color:red"><?php if(isset($article_err)) echo $article_err?></span><br />
+            
+            
+            <div class="alert alert-danger" 
+            <?php if(!isset($article_err) || ( isset($article_err) && empty($article_err) )) echo "hidden"; ?>
+            style="color:red;">
+            <?php if(isset($article_err)) echo $article_err?>
+            </div>
+            <br />
+
             <input type="submit" value="Edit" class="btn btn-primary"> 
-            <span class="text-success"><?php if(isset($success)) echo $success ?></span>
+            <div class="alert alert-success"
+            <?php if(!isset($success) || ( isset($success) && empty($success) )) echo "hidden" ?> 
+            >
+            <?php if(isset($success)) echo $success ?>
+            </div>
         </form>
     </div>
 </body>
