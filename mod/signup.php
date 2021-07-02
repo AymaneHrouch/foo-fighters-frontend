@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["name"]))){
         $name_err = "Please enter you full name.";     
     } elseif(strlen(trim($_POST["name"])) < 5){
-        $name_err = "Password must have atleast 5 characters.";
+        $name_err = "Name must have atleast 5 characters.";
     } else{
         $name = trim($_POST["name"]);
     }

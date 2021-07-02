@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
       <div class="message">
         <span class="user"><?php echo htmlspecialchars($infos['user']) ?></span>
         <p>
-            <?php echo $infos['msg'] ?>
+            <?php echo htmlspecialchars($infos['msg']) ?>
         </p>
         <span class="date"><?php echo $infos['date'] ?></span>
       </div>
