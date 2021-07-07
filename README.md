@@ -14,7 +14,7 @@ Une explication pour le contenu des répertoires:
 
 
 
-## Le rapport de projet ##
+## Le rapport de projet  ##
 ./DOCS:
 
 ## Un fichier SQL pour importer sur votre base de données mySQL; ##
