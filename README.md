@@ -1,6 +1,6 @@
-Ce projet a été réalisé HROUCH Aymane, et GHOUNDAL Youssef.  
-  
-  
+Ce site est mon mini-projet du module Programmation Web, première année en cycle ingénieur, filière Informatique et ingénierie des données, à l'ENSA de Khouribga.
+
+Il s'agit d'un site web de Foo Fighters, un groupe américain du rock.
   
   
   
